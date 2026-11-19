@@ -1,5 +1,15 @@
 # MODL interactive results
 
+The public webpage is temporarily unavailable and returns **HTTP 404**.
+`public/site-config.json` sets `pagesMode` to `not-found`, so the Pages build
+contains only `404.html` and `.nojekyll`, without an index page. The root
+`.nojekyll` file also prevents branch publishing from turning this README into
+the website's homepage.
+
+To restore the research page, set `pagesMode` to `viewer`, configure
+**Settings → Pages → Source → GitHub Actions**, and push the change to `main`.
+The regular `npm run build` still builds the local viewer.
+
 Static research viewer for **Watertight Mesh Optimization of Textured Objects**,
 adapted from `mesh_rts/visuals`. It compares reconstructions with linked cameras,
 geometry, appearance, and wireframe views, plus optimization videos. Visitors

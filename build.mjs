@@ -6,6 +6,14 @@ import { assetBaseURL } from './src/asset-urls.js';
 
 const root = path.dirname(fileURLToPath(import.meta.url));
 const config = JSON.parse(await readFile(path.join(root, 'public/site-config.json'), 'utf8'));
+if (process.argv.includes('--pages') && config.pagesMode === 'not-found') {
+  await rm(path.join(root, 'dist'), { recursive: true, force: true });
+  await mkdir(path.join(root, 'dist'), { recursive: true });
+  await copyFile(path.join(root, '404.html'), path.join(root, 'dist/404.html'));
+  await writeFile(path.join(root, 'dist/.nojekyll'), '');
+  console.log('Built temporary 404 site without an index page, models, or videos.');
+  process.exit(0);
+}
 if (process.env.ASSET_BASE_URL?.trim()) config.assetBaseUrl = process.env.ASSET_BASE_URL.trim();
 assetBaseURL(config, 'https://nburgdorfer.github.io/modl/scenes.json');
 const placeholder = process.argv.includes('--placeholder') ||
