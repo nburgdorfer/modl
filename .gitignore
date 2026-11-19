@@ -1,0 +1,12 @@
+node_modules/
+dist/
+assets/
+generated/
+exhibit/
+releases/
+test-results/
+*.zip
+.DS_Store
+.agents/
+.codex/
+.aws/

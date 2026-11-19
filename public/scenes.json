@@ -1,0 +1,712 @@
+{
+  "title": "Watertight Mesh Optimization of Textured Objects",
+  "methods": [
+    "MODL",
+    "2DGS",
+    "TriangleSplatting",
+    "MeshSplatting"
+  ],
+  "datasets": [
+    "AriaDTC",
+    "DTU"
+  ],
+  "scenes": [
+    {
+      "id": "BirdHouseRedRoofYellowWindows_Lighting001",
+      "title": "Birdhouse",
+      "dataset": "AriaDTC",
+      "visibleMethods": [
+        0,
+        3,
+        1
+      ],
+      "fitReference": 0,
+      "models": [
+        {
+          "src": "assets/BirdHouseRedRoofYellowWindows_Lighting001/model-1/modl.modl",
+          "bytes": 56094784
+        },
+        {
+          "src": "assets/BirdHouseRedRoofYellowWindows_Lighting001/model-2/ground-truth.glb",
+          "bytes": 35699324
+        },
+        null,
+        {
+          "src": "assets/BirdHouseRedRoofYellowWindows_Lighting001/model-4/meshsplatting.modl",
+          "bytes": 53489840
+        }
+      ],
+      "videos": [
+        {
+          "src": "assets/BirdHouseRedRoofYellowWindows_Lighting001/videos/video-1.webm",
+          "title": "Birdhouse \u00b7 MODL optimization",
+          "bytes": 755044
+        }
+      ],
+      "methodLabels": [
+        "MODL",
+        "Ground truth",
+        "TriangleSplatting",
+        "MeshSplatting"
+      ]
+    },
+    {
+      "id": "DecorativeBoxHexMedium_Lighting002",
+      "title": "Decorative box",
+      "dataset": "AriaDTC",
+      "visibleMethods": [
+        0,
+        3,
+        1
+      ],
+      "fitReference": 0,
+      "models": [
+        {
+          "src": "assets/DecorativeBoxHexMedium_Lighting002/model-1/modl.modl",
+          "bytes": 55712200
+        },
+        {
+          "src": "assets/DecorativeBoxHexMedium_Lighting002/model-2/ground-truth.glb",
+          "bytes": 24120988
+        },
+        null,
+        {
+          "src": "assets/DecorativeBoxHexMedium_Lighting002/model-4/meshsplatting.modl",
+          "bytes": 26060336
+        }
+      ],
+      "videos": [
+        {
+          "src": "assets/DecorativeBoxHexMedium_Lighting002/videos/video-1.webm",
+          "title": "Decorative box \u00b7 MODL optimization",
+          "bytes": 403428
+        }
+      ],
+      "methodLabels": [
+        "MODL",
+        "Ground truth",
+        "TriangleSplatting",
+        "MeshSplatting"
+      ]
+    },
+    {
+      "id": "Figurine_B08FYFNYP4_LionKing_Lighting002",
+      "title": "Lion king",
+      "dataset": "AriaDTC",
+      "visibleMethods": [
+        0,
+        3,
+        1
+      ],
+      "fitReference": 0,
+      "models": [
+        {
+          "src": "assets/Figurine_B08FYFNYP4_LionKing_Lighting002/model-1/modl.modl",
+          "bytes": 55727932
+        },
+        {
+          "src": "assets/Figurine_B08FYFNYP4_LionKing_Lighting002/model-2/ground-truth.glb",
+          "bytes": 132786340
+        },
+        null,
+        {
+          "src": "assets/Figurine_B08FYFNYP4_LionKing_Lighting002/model-4/meshsplatting.modl",
+          "bytes": 21841004
+        }
+      ],
+      "videos": [
+        {
+          "src": "assets/Figurine_B08FYFNYP4_LionKing_Lighting002/videos/video-1.webm",
+          "title": "Lion king \u00b7 MODL optimization",
+          "bytes": 548005
+        }
+      ],
+      "methodLabels": [
+        "MODL",
+        "Ground truth",
+        "TriangleSplatting",
+        "MeshSplatting"
+      ]
+    },
+    {
+      "id": "Figurine_B0983CQ2HH_Angel_Lighting001",
+      "title": "Angel",
+      "dataset": "AriaDTC",
+      "visibleMethods": [
+        0,
+        3,
+        1
+      ],
+      "fitReference": 0,
+      "models": [
+        {
+          "src": "assets/Figurine_B0983CQ2HH_Angel_Lighting001/model-1/modl.modl",
+          "bytes": 55564000
+        },
+        {
+          "src": "assets/Figurine_B0983CQ2HH_Angel_Lighting001/model-2/ground-truth.glb",
+          "bytes": 140213204
+        },
+        null,
+        {
+          "src": "assets/Figurine_B0983CQ2HH_Angel_Lighting001/model-4/meshsplatting.modl",
+          "bytes": 71019668
+        }
+      ],
+      "videos": [
+        {
+          "src": "assets/Figurine_B0983CQ2HH_Angel_Lighting001/videos/video-1.webm",
+          "title": "Angel \u00b7 MODL optimization",
+          "bytes": 491485
+        }
+      ],
+      "methodLabels": [
+        "MODL",
+        "Ground truth",
+        "TriangleSplatting",
+        "MeshSplatting"
+      ]
+    },
+    {
+      "id": "Figurine_B0CR3Y5T3K_Gnome_Lighting001",
+      "title": "Gnome",
+      "dataset": "AriaDTC",
+      "visibleMethods": [
+        0,
+        3,
+        1
+      ],
+      "fitReference": 0,
+      "models": [
+        {
+          "src": "assets/Figurine_B0CR3Y5T3K_Gnome_Lighting001/model-1/modl.modl",
+          "bytes": 53911228
+        },
+        {
+          "src": "assets/Figurine_B0CR3Y5T3K_Gnome_Lighting001/model-2/ground-truth.glb",
+          "bytes": 128780404
+        },
+        null,
+        {
+          "src": "assets/Figurine_B0CR3Y5T3K_Gnome_Lighting001/model-4/meshsplatting.modl",
+          "bytes": 21011924
+        }
+      ],
+      "videos": [
+        {
+          "src": "assets/Figurine_B0CR3Y5T3K_Gnome_Lighting001/videos/video-1.webm",
+          "title": "Gnome \u00b7 MODL optimization",
+          "bytes": 478337
+        }
+      ],
+      "methodLabels": [
+        "MODL",
+        "Ground truth",
+        "TriangleSplatting",
+        "MeshSplatting"
+      ]
+    },
+    {
+      "id": "Gargoyle_B0C3RQ5254_Bronze_Lighting002",
+      "title": "Gargoyle",
+      "dataset": "AriaDTC",
+      "visibleMethods": [
+        0,
+        3,
+        1
+      ],
+      "fitReference": 0,
+      "models": [
+        {
+          "src": "assets/Gargoyle_B0C3RQ5254_Bronze_Lighting002/model-1/modl.modl",
+          "bytes": 53816152
+        },
+        {
+          "src": "assets/Gargoyle_B0C3RQ5254_Bronze_Lighting002/model-2/ground-truth.glb",
+          "bytes": 124290976
+        },
+        null,
+        {
+          "src": "assets/Gargoyle_B0C3RQ5254_Bronze_Lighting002/model-4/meshsplatting.modl",
+          "bytes": 51728312
+        }
+      ],
+      "videos": [
+        {
+          "src": "assets/Gargoyle_B0C3RQ5254_Bronze_Lighting002/videos/video-1.webm",
+          "title": "Gargoyle \u00b7 MODL optimization",
+          "bytes": 455699
+        }
+      ],
+      "methodLabels": [
+        "MODL",
+        "Ground truth",
+        "TriangleSplatting",
+        "MeshSplatting"
+      ]
+    },
+    {
+      "id": "Pottery_B0CJJ59SLH_BlueHairFairy_Lighting001",
+      "title": "Blue hair fairy",
+      "dataset": "AriaDTC",
+      "visibleMethods": [
+        0,
+        3,
+        1
+      ],
+      "fitReference": 0,
+      "models": [
+        {
+          "src": "assets/Pottery_B0CJJ59SLH_BlueHairFairy_Lighting001/model-1/modl.modl",
+          "bytes": 55330528
+        },
+        {
+          "src": "assets/Pottery_B0CJJ59SLH_BlueHairFairy_Lighting001/model-2/ground-truth.glb",
+          "bytes": 136687708
+        },
+        null,
+        {
+          "src": "assets/Pottery_B0CJJ59SLH_BlueHairFairy_Lighting001/model-4/meshsplatting.modl",
+          "bytes": 35573816
+        }
+      ],
+      "videos": [
+        {
+          "src": "assets/Pottery_B0CJJ59SLH_BlueHairFairy_Lighting001/videos/video-1.webm",
+          "title": "Blue hair fairy \u00b7 MODL optimization",
+          "bytes": 577960
+        }
+      ],
+      "methodLabels": [
+        "MODL",
+        "Ground truth",
+        "TriangleSplatting",
+        "MeshSplatting"
+      ]
+    },
+    {
+      "id": "Vase_B0BV44B4R4_BlueBirdsYellowBirds_Lighting002",
+      "title": "Bird vase",
+      "dataset": "AriaDTC",
+      "visibleMethods": [
+        0,
+        3,
+        1
+      ],
+      "fitReference": 0,
+      "models": [
+        {
+          "src": "assets/Vase_B0BV44B4R4_BlueBirdsYellowBirds_Lighting002/model-1/modl.modl",
+          "bytes": 55994920
+        },
+        {
+          "src": "assets/Vase_B0BV44B4R4_BlueBirdsYellowBirds_Lighting002/model-2/ground-truth.glb",
+          "bytes": 36347524
+        },
+        null,
+        {
+          "src": "assets/Vase_B0BV44B4R4_BlueBirdsYellowBirds_Lighting002/model-4/meshsplatting.modl",
+          "bytes": 77509148
+        }
+      ],
+      "videos": [
+        {
+          "src": "assets/Vase_B0BV44B4R4_BlueBirdsYellowBirds_Lighting002/videos/video-1.webm",
+          "title": "Bird vase \u00b7 MODL optimization",
+          "bytes": 632204
+        }
+      ],
+      "methodLabels": [
+        "MODL",
+        "Ground truth",
+        "TriangleSplatting",
+        "MeshSplatting"
+      ]
+    },
+    {
+      "id": "scan055",
+      "title": "Scan 55",
+      "dataset": "DTU",
+      "visibleMethods": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "fitReference": 0,
+      "models": [
+        {
+          "src": "assets/scan055/model-1/modl.modl",
+          "bytes": 56658628
+        },
+        {
+          "src": "assets/scan055/model-2/culled_mesh.ply",
+          "bytes": 15307585
+        },
+        {
+          "src": "assets/scan055/model-3/culled_mesh_no_mask.ply",
+          "bytes": 21798952
+        },
+        {
+          "src": "assets/scan055/model-4/meshsplatting.modl",
+          "scale": 263.91900634765625,
+          "position": [
+            -12.890473365783691,
+            -9.66372013092041,
+            649.0787353515625
+          ],
+          "bytes": 81016340
+        }
+      ],
+      "videos": [
+        {
+          "src": "assets/scan055/videos/video-1.webm",
+          "title": "Scan 55 \u00b7 MODL optimization",
+          "bytes": 620718
+        }
+      ],
+      "camera": {
+        "direction": [
+          0.8498939414230456,
+          0.44706497766113545,
+          -0.2789501641534719
+        ],
+        "up": [
+          -0.05405489892480282,
+          -0.45260625388418607,
+          -0.8900705853173406
+        ]
+      }
+    },
+    {
+      "id": "scan065",
+      "title": "Scan 65",
+      "dataset": "DTU",
+      "visibleMethods": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "fitReference": 0,
+      "models": [
+        {
+          "src": "assets/scan065/model-1/modl.modl",
+          "bytes": 56905552
+        },
+        {
+          "src": "assets/scan065/model-2/culled_mesh.ply",
+          "bytes": 15439464
+        },
+        {
+          "src": "assets/scan065/model-3/culled_mesh_no_mask.ply",
+          "bytes": 24179804
+        },
+        {
+          "src": "assets/scan065/model-4/meshsplatting.modl",
+          "scale": 246.4054412841797,
+          "position": [
+            -37.54228591918945,
+            -42.644344329833984,
+            653.2088623046875
+          ],
+          "bytes": 93958364
+        }
+      ],
+      "videos": [
+        {
+          "src": "assets/scan065/videos/video-1.webm",
+          "title": "Scan 65 \u00b7 MODL optimization",
+          "bytes": 438602
+        }
+      ],
+      "camera": {
+        "direction": [
+          0.8498939414230456,
+          0.44706497766113545,
+          -0.2789501641534719
+        ],
+        "up": [
+          -0.05405489892480282,
+          -0.45260625388418607,
+          -0.8900705853173406
+        ]
+      }
+    },
+    {
+      "id": "scan106",
+      "title": "Scan 106",
+      "dataset": "DTU",
+      "visibleMethods": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "fitReference": 0,
+      "models": [
+        {
+          "src": "assets/scan106/model-1/modl.modl",
+          "bytes": 56765332
+        },
+        {
+          "src": "assets/scan106/model-2/culled_mesh.ply",
+          "bytes": 29572064
+        },
+        {
+          "src": "assets/scan106/model-3/culled_mesh_no_mask.ply",
+          "bytes": 26335801
+        },
+        {
+          "src": "assets/scan106/model-4/meshsplatting.modl",
+          "scale": 329.365966796875,
+          "position": [
+            -53.71196746826172,
+            -16.958053588867188,
+            651.7642211914062
+          ],
+          "bytes": 79191812
+        }
+      ],
+      "videos": [
+        {
+          "src": "assets/scan106/videos/video-1.webm",
+          "title": "Scan 106 \u00b7 MODL optimization",
+          "bytes": 387766
+        }
+      ],
+      "camera": {
+        "direction": [
+          0.8498939414230456,
+          0.44706497766113545,
+          -0.2789501641534719
+        ],
+        "up": [
+          -0.05405489892480282,
+          -0.45260625388418607,
+          -0.8900705853173406
+        ]
+      }
+    },
+    {
+      "id": "scan110",
+      "title": "Scan 110",
+      "dataset": "DTU",
+      "visibleMethods": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "fitReference": 0,
+      "models": [
+        {
+          "src": "assets/scan110/model-1/modl.modl",
+          "bytes": 56837608
+        },
+        {
+          "src": "assets/scan110/model-2/culled_mesh.ply",
+          "bytes": 23548323
+        },
+        {
+          "src": "assets/scan110/model-3/culled_mesh_no_mask.ply",
+          "bytes": 24301714
+        },
+        {
+          "src": "assets/scan110/model-4/meshsplatting.modl",
+          "scale": 314.22735595703125,
+          "position": [
+            -54.2746696472168,
+            -33.59214401245117,
+            682.8167724609375
+          ],
+          "bytes": 76967072
+        }
+      ],
+      "videos": [
+        {
+          "src": "assets/scan110/videos/video-1.webm",
+          "title": "Scan 110 \u00b7 MODL optimization",
+          "bytes": 257689
+        }
+      ],
+      "camera": {
+        "direction": [
+          0.8498939414230456,
+          0.44706497766113545,
+          -0.2789501641534719
+        ],
+        "up": [
+          -0.05405489892480282,
+          -0.45260625388418607,
+          -0.8900705853173406
+        ]
+      }
+    },
+    {
+      "id": "scan114",
+      "title": "Scan 114",
+      "dataset": "DTU",
+      "visibleMethods": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "fitReference": 0,
+      "models": [
+        {
+          "src": "assets/scan114/model-1/modl.modl",
+          "bytes": 56332360
+        },
+        {
+          "src": "assets/scan114/model-2/culled_mesh.ply",
+          "bytes": 27503467
+        },
+        {
+          "src": "assets/scan114/model-3/culled_mesh_no_mask.ply",
+          "bytes": 16813865
+        },
+        {
+          "src": "assets/scan114/model-4/meshsplatting.modl",
+          "scale": 359.9239501953125,
+          "position": [
+            -74.39337921142578,
+            -17.338125228881836,
+            672.14111328125
+          ],
+          "bytes": 73239788
+        }
+      ],
+      "videos": [
+        {
+          "src": "assets/scan114/videos/video-1.webm",
+          "title": "Scan 114 \u00b7 MODL optimization",
+          "bytes": 411227
+        }
+      ],
+      "camera": {
+        "direction": [
+          0.8498939414230456,
+          0.44706497766113545,
+          -0.2789501641534719
+        ],
+        "up": [
+          -0.05405489892480282,
+          -0.45260625388418607,
+          -0.8900705853173406
+        ]
+      }
+    },
+    {
+      "id": "scan118",
+      "title": "Scan 118",
+      "dataset": "DTU",
+      "visibleMethods": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "fitReference": 0,
+      "models": [
+        {
+          "src": "assets/scan118/model-1/modl.modl",
+          "bytes": 56621464
+        },
+        {
+          "src": "assets/scan118/model-2/culled_mesh.ply",
+          "bytes": 21375459
+        },
+        {
+          "src": "assets/scan118/model-3/culled_mesh_no_mask.ply",
+          "bytes": 25304417
+        },
+        {
+          "src": "assets/scan118/model-4/meshsplatting.modl",
+          "scale": 302.9843444824219,
+          "position": [
+            -41.97808074951172,
+            -19.879968643188477,
+            632.1859130859375
+          ],
+          "bytes": 82739516
+        }
+      ],
+      "videos": [
+        {
+          "src": "assets/scan118/videos/video-1.webm",
+          "title": "Scan 118 \u00b7 MODL optimization",
+          "bytes": 288725
+        }
+      ],
+      "camera": {
+        "direction": [
+          0.8498939414230456,
+          0.44706497766113545,
+          -0.2789501641534719
+        ],
+        "up": [
+          -0.05405489892480282,
+          -0.45260625388418607,
+          -0.8900705853173406
+        ]
+      }
+    },
+    {
+      "id": "scan122",
+      "title": "Scan 122",
+      "dataset": "DTU",
+      "visibleMethods": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "fitReference": 0,
+      "models": [
+        {
+          "src": "assets/scan122/model-1/modl.modl",
+          "bytes": 56626252
+        },
+        {
+          "src": "assets/scan122/model-2/culled_mesh.ply",
+          "bytes": 15788304
+        },
+        {
+          "src": "assets/scan122/model-3/culled_mesh_no_mask.ply",
+          "bytes": 20572406
+        },
+        {
+          "src": "assets/scan122/model-4/meshsplatting.modl",
+          "scale": 270.71173095703125,
+          "position": [
+            -15.406828880310059,
+            -4.745272636413574,
+            646.6107788085938
+          ],
+          "bytes": 81119024
+        }
+      ],
+      "videos": [
+        {
+          "src": "assets/scan122/videos/video-1.webm",
+          "title": "Scan 122 \u00b7 MODL optimization",
+          "bytes": 284908
+        }
+      ],
+      "camera": {
+        "direction": [
+          0.8498939414230456,
+          0.44706497766113545,
+          -0.2789501641534719
+        ],
+        "up": [
+          -0.05405489892480282,
+          -0.45260625388418607,
+          -0.8900705853173406
+        ]
+      }
+    }
+  ]
+}

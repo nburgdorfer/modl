@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Explore MODL mesh reconstructions on AriaDTC and DTU. Compare geometry, appearance, and wireframes with linked 3D views and optimization videos.">
+  <title>Watertight Mesh Optimization of Textured Objects</title>
+  <style>/* INLINE_STYLE */</style>
+</head>
+<body>
+  <header class="masthead">
+    <a class="brand" href="#"><span>MODL</span></a>
+    <nav class="header-links" aria-label="Project"><a href="#results">Interactive results</a><a href="https://github.com/nburgdorfer/modl">Website source</a></nav>
+  </header>
+  <main>
+    <section class="intro">
+      <div><p class="eyebrow">MODL · INTERACTIVE RESULTS</p><h1>Watertight Mesh Optimization of Textured Objects</h1><p class="intro-text">Explore reconstructed surfaces on AriaDTC and DTU. Compare geometry, appearance, and triangle structure with linked 3D views, then watch the optimization process.</p><div class="project-links" role="group" aria-label="Research resources"><button class="project-link" type="button" disabled aria-label="Paper coming soon"><span>Paper</span><small>Coming soon</small></button><button class="project-link" type="button" disabled aria-label="Code coming soon"><span>Code</span><small>Coming soon</small></button></div></div>
+    </section>
+    <nav id="dataset-tabs" class="dataset-tabs" role="tablist" aria-label="Dataset"></nav>
+    <section id="results" aria-labelledby="comparison-heading" class="comparison-section">
+      <div class="section-heading"><h2 id="comparison-heading">Compare reconstructions</h2></div>
+      <div class="scene-download"><p id="scene-size">Choose a scene to explore its reconstructions.</p><button id="load-scene" class="button dark" disabled>Load scene</button></div>
+      <div class="toolbar">
+        <label class="scene-picker"><span>SCENE</span><select id="scene-select" aria-label="Scene" disabled><option value="">Loading scenes…</option></select></label>
+        <div class="mode-switch" role="group" aria-label="Rendering mode">
+          <button data-mode="geometry" aria-pressed="true">Geometry</button><button data-mode="appearance" aria-pressed="false">Appearance</button><button data-mode="wireframe" aria-pressed="false">Wireframe</button>
+        </div>
+        <div class="view-tools"><label class="quality-label" title="Balanced uses a pixel ratio of 1. High uses up to 2."><span class="sr-only">Render quality</span><select id="quality"><option value="balanced">Balanced quality</option><option value="high">High quality</option></select></label><button class="button subtle" id="set-up-direction" title="Keep this view and use its screen-up direction as the orbit axis for every panel" disabled>Use current view as up</button><button class="button subtle" id="fit" title="Fit all meshes to one common view"><span>Fit all</span></button></div>
+      </div>
+      <div id="comparison-grid" class="comparison-grid" hidden>
+        <canvas id="render-canvas" aria-hidden="true"></canvas>
+      </div>
+      <div class="viewer-footer"><p><span class="mouse-icon" aria-hidden="true">↔</span> Drag to orbit <span>·</span> Scroll to zoom <span>·</span> Right-drag to pan</p><div class="presets" role="group" aria-label="Camera direction"><span>VIEW</span><button data-view="perspective" aria-pressed="true">3D</button><button data-view="front" aria-pressed="false">Front</button><button data-view="side" aria-pressed="false">Side</button><button data-view="top" aria-pressed="false">Top</button></div></div>
+      <div class="scene-note" hidden><p id="mode-description"></p></div>
+      <p id="global-status" role="status" aria-live="polite"></p>
+    </section>
+    <section class="video-section" aria-labelledby="video-heading">
+      <div class="section-heading"><h2 id="video-heading">Optimization</h2></div>
+      <div id="video-gallery" class="video-gallery"></div>
+    </section>
+  </main>
+  <footer class="page-footer"><span>MODL <span>/</span> Interactive results</span><a href="https://github.com/nburgdorfer/modl">Website source</a></footer>
+  <noscript>This viewer requires JavaScript and a browser with WebGL2 support.</noscript>
+  <script>/* INLINE_SCRIPT */</script>
+</body>
+</html>
