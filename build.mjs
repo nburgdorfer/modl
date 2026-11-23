@@ -3,9 +3,20 @@ import { readFile, mkdir, writeFile, copyFile, rm } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import { assetBaseURL } from './src/asset-urls.js';
+import { buildDemo } from './scripts/demo.mjs';
 
 const root = path.dirname(fileURLToPath(import.meta.url));
 const config = JSON.parse(await readFile(path.join(root, 'public/site-config.json'), 'utf8'));
+if (process.argv.includes('--pages') && config.pagesMode === 'demo') {
+  const dist = path.join(root, 'dist');
+  await rm(dist, { recursive: true, force: true });
+  await mkdir(dist, { recursive: true });
+  const bytes = await buildDemo(path.join(dist, 'index.html'));
+  await copyFile(path.join(root, '404.html'), path.join(dist, '404.html'));
+  await writeFile(path.join(dist, '.nojekyll'), '');
+  console.log(`Built self-contained demo: ${path.join(dist, 'index.html')} (${bytes} bytes).`);
+  process.exit(0);
+}
 if (process.argv.includes('--pages') && config.pagesMode === 'not-found') {
   await rm(path.join(root, 'dist'), { recursive: true, force: true });
   await mkdir(path.join(root, 'dist'), { recursive: true });

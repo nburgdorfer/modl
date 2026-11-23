@@ -1,28 +1,39 @@
 # MODL interactive results
 
-The public webpage is temporarily unavailable and returns **HTTP 404**.
-`public/site-config.json` sets `pagesMode` to `not-found`, so the Pages build
-contains only `404.html` and `.nojekyll`, without an index page. The root
-`.nojekyll` file also prevents branch publishing from turning this README into
-the website's homepage.
+The website at <https://nburgdorfer.github.io/modl/> is configured to serve the
+self-contained demo from `mesh_rts/visuals_single/dist/demo.html`.
+`public/site-config.json` sets `pagesMode` to `demo`. The Pages build restores
+the original HTML byte for byte as `dist/index.html`, including its embedded
+models and videos; no external asset host is needed. The HTML is 236,553,230
+bytes (about 226 MiB), so its initial download is substantial.
 
-To restore the research page, set `pagesMode` to `viewer`, configure
-**Settings → Pages → Source → GitHub Actions**, and push the change to `main`.
-The regular `npm run build` still builds the local viewer.
+The imported HTML is stored as gzip parts in `public/demo/`, with
+`manifest.json` recording how to restore and verify it. This keeps each tracked
+file below GitHub's per-file limit. To replace the demo and preview it:
 
-Static research viewer for **Watertight Mesh Optimization of Textured Objects**,
-adapted from `mesh_rts/visuals`. It compares reconstructions with linked cameras,
-geometry, appearance, and wireframe views, plus optimization videos. Visitors
-choose a scene and load it explicitly; its download size is shown first.
+```sh
+npm run import:demo -- /path/to/demo.html
+npm run build:pages
+npm run preview
+```
 
-The website is configured for <https://nburgdorfer.github.io/modl/>. GitHub Pages
-can publish immediately with empty model panels and a coming-soon message.
-The Paper and Code buttons are placeholders until their links are available.
-Models and videos can be enabled later by configuring a public asset host.
+Open <http://127.0.0.1:8080/modl/>. Commit the updated parts and manifest with
+any source changes before publishing through the existing GitHub Actions
+workflow. `ASSET_BASE_URL` is ignored in demo mode.
+
+The original research viewer for **Watertight Mesh Optimization of Textured
+Objects**, adapted from `mesh_rts/visuals`, remains in `src/`. It compares
+reconstructions with linked cameras, geometry, appearance, and wireframe views,
+plus optimization videos. `npm run build` still builds this viewer locally.
+To publish it again, set `pagesMode` to `viewer` and follow the asset-host
+instructions below. Its Paper and Code buttons remain placeholders.
 
 ## Hosting layout
 
-GitHub Pages serves the viewer and scene manifest, approximately 1 MB. Separate
+This section and the storage guidance below apply to the original viewer
+(`pagesMode: "viewer"`), not the self-contained demo.
+
+GitHub Pages serves that viewer and scene manifest, approximately 1 MB. Separate
 public storage serves the meshes and videos. [GitHub Pages limits published
 sites to 1 GB and has a soft bandwidth limit of 100 GB per
 month](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits).
@@ -95,7 +106,9 @@ host for the live demos.
 
 ## Local development
 
-Use Node.js 22, then run from this repository:
+Use Node.js 22. To preview the current demo, run `npm ci`, `npm test`,
+`npm run build:pages`, and `npm run preview`. To work on the original viewer,
+run from this repository:
 
 ```sh
 npm ci
@@ -114,6 +127,8 @@ Edit the viewer in `src/` and the scene list in `public/scenes.json`. Build
 output goes to `dist/`. Rebuild after source or configuration changes.
 
 ## Set up the asset host
+
+Only the original viewer needs this setup; demo mode embeds its assets.
 
 Upload the original `exhibit/assets/` directory to public HTTPS storage that
 supports browser access, such as university web hosting, S3, or Cloudflare R2.
@@ -162,24 +177,28 @@ PLY files. Preserve embedded model attribution and license metadata.
 2. Commit and push the website source to `main`, or run the **Build and deploy
    GitHub Pages** workflow manually on `main`.
 
-With no `ASSET_BASE_URL` set, the Pages build publishes the page with empty
-model panels, disabled viewer controls, and coming-soon messages. Its generated
-scene manifest contains no model or video URLs, so visitors make no asset
-requests. To inspect that version locally, run `npm run build:pages` followed by
-`npm run preview`. The regular `npm run build` retains local mesh loading.
+With `pagesMode` set to `demo`, the Pages build publishes the imported HTML
+with its embedded models and videos. Run `npm run build:pages` followed by
+`npm run preview` to inspect the same output locally.
 
-To enable the interactive demos later:
+To publish the original viewer instead:
 
-1. Upload the assets and verify that the public URLs and CORS headers work.
-2. In **Settings → Secrets and variables → Actions → Variables**, add
+1. Set `pagesMode` to `viewer` in `public/site-config.json`.
+2. Upload the assets and verify that the public URLs and CORS headers work.
+3. In **Settings → Secrets and variables → Actions → Variables**, add
    `ASSET_BASE_URL` with the HTTPS base URL.
-3. Run the workflow again on `main`. The same source now builds the full viewer.
+4. Commit and push the configuration change to `main`.
+
+In viewer mode only, an empty `ASSET_BASE_URL` and `assetBaseUrl` produce a
+placeholder page with empty model panels, disabled controls, and coming-soon
+messages. Its scene manifest contains no model or video URLs.
 
 The workflow installs locked dependencies, tests, builds, and deploys only
-`dist/`. It never uploads the mesh collection. Pull requests run tests and a
+`dist/`. Demo mode includes its embedded assets; viewer mode leaves the larger
+mesh collection on its separate asset host. Pull requests run tests and a
 preview build without deploying. The production command, `npm run build:pages`,
-selects placeholder or interactive mode from the asset configuration. Use
-`node build.mjs --placeholder` to force a placeholder build for local inspection.
+uses `pagesMode` to select the demo or original viewer. Use
+`node build.mjs --placeholder` to inspect the original viewer's placeholder page.
 Check the workflow's returned Pages URL after it succeeds.
 
 The [GitHub Pages custom workflow

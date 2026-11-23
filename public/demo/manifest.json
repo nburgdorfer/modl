@@ -1,0 +1,11 @@
+{
+  "bytes": 236553230,
+  "sha256": "abcc252f876827d557d8dbdf9c8ca831c9ca3318f0f1289e2d022bbeb181e11c",
+  "parts": [
+    "demo-000.html.gz",
+    "demo-001.html.gz",
+    "demo-002.html.gz",
+    "demo-003.html.gz",
+    "demo-004.html.gz"
+  ]
+}

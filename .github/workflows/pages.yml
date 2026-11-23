@@ -26,7 +26,7 @@ jobs:
       - run: npm test
       - name: Build preview
         if: github.event_name == 'pull_request' || github.ref != 'refs/heads/main'
-        run: npm run build
+        run: npm run build:pages
       - name: Build public site
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         env:
